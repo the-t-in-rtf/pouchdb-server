@@ -36,7 +36,7 @@
     "nomnom": "^1.8.1",
     "object-assign": "^4.1.0",
     "on-finished": "^2.3.0",
-    "pouchdb-all-dbs": "^1.0.2",
+    "@the-t-in-rtf/pouchdb-all-dbs": "1.0.2",
     "pouchdb-fauxton": "^0.0.6",
     "promise-nodify": "^1.0.2",
     "random-uuid-v4": "0.0.6",
