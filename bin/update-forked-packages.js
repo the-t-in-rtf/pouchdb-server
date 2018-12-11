@@ -1,3 +1,10 @@
+/* 
+
+Update the sub-modules we plan to publish as our own scoped modules. Adapted from:
+
+https://github.com/pouchdb/pouchdb-server/blob/master/bin/update-package-json-for-publish.js
+
+*/
 'use strict';
 
 // Update all the dependencies inside packages/node_modules/*/package.json
