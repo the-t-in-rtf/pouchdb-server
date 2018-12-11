@@ -1,14 +1,14 @@
 # Note:
 
-**This package is forked from the pouchdb-server monorepo for the purposes of publishing a scoped version of express-pouchdb.**
+**This package is forked from the pouchdb-server monorepo for the purposes of publishing a scoped version of express-pouchdb and pouchdb-auth.**
 
-To publish a scoped version, use steps like the following:
+To publish a scoped version, use steps like the following for both `express-pouchdb` and `pouchdb-auth`:
 
-1. `node bin/update-express-pouchdb-package.js`
-2. `cd packages/node_modules/express-pouchdb`
-3 `npm publish --access=public`
-
-
+1. `node bin/update-forked-packages.js`
+2. `cd packages/node_modules/<package>`
+3. `npm install`
+4. Check `package-lock.json` into Git.
+5. `fluid-publish`
 
 PouchDB Server [![Build Status](https://travis-ci.org/pouchdb/pouchdb-server.svg)](https://travis-ci.org/pouchdb/pouchdb-server) [![Greenkeeper badge](https://badges.greenkeeper.io/pouchdb/pouchdb-server.svg)](https://greenkeeper.io/)
 =====

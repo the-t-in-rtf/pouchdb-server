@@ -13,3 +13,4 @@ log.txt
 /pouchdb
 /tmp
 pouchdb-tests
+packages/node_modules/pouchdb-auth/node_modules
