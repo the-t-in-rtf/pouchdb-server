@@ -1,3 +1,31 @@
+# Note:
+
+**This package is forked from the pouchdb-server monorepo for the purposes of publishing a scoped version of express-pouchdb and pouchdb-auth.**
+
+When publishing these modules, you should:
+
+1. `node bin/update-forked-packages.js`
+2. `cd packages/node_modules/pouchdb-auth`
+3. `npm install`
+4. Check in your changes.
+5. `fluid-publish` the `pouchdb-auth` sub-module from its subdirectory.
+6. Make a note of the dev release version of `pouchdb-auth`.
+7. `cd ../../../packages/node_modules/express-pouchdb`
+8. Edit the `package.json` of the `express-pouchb` sub-module and set the `pouchdb-auth` version to the scoped name and version.
+9. Run `npm install` from the `express-pouchdb` sub-module.
+10. Check in your changes again.
+11. `fluid-publish` the `express-pouchdb` sub-module from its subdirectory.
+
+Note, for the initial publication of the above, it was neccessary to run `npm publish --access=public` for each immediately before the `fluid-publish` step.
+You should only need to do this if you add another sub-module to the list of forked and scoped publications.  The only change you should need to make to scope an
+additional sub-module is to:
+
+1. Add the package to the list of modules in `bin/update-forked-packages.js`, before running step 1.
+2. Add the scope (i.e. `@the-t-in-rtf` for now) to the specific package.json, before step 3 above (earlier is fine).
+3. Add the new package to this note, and any new instructions about the order in which things need to be done.
+
+=====
+
 PouchDB Server [![Build Status](https://travis-ci.org/pouchdb/pouchdb-server.svg)](https://travis-ci.org/pouchdb/pouchdb-server) [![Greenkeeper badge](https://badges.greenkeeper.io/pouchdb/pouchdb-server.svg)](https://greenkeeper.io/)
 =====
 
